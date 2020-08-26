@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="SUCCINCT"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\include\;CMake Files\include\ds2i\;CMake Files\external\;CMake Files\external\succinct\;CMake Files\external\succinct\perftest\;CMake Files\external\FastPFor\;CMake Files\external\FastPFor\cmake_modules\;CMake Files\src\;CMake Files\vroom_env\;CMake Files\test\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="succinct">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/libsuccinct.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/succinct"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/Makefile&quot;  VERBOSE=1 succinct"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="succinct/fast">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/libsuccinct.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/succinct"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/Makefile&quot;  VERBOSE=1 succinct/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="perftest_elias_fano">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/perftest_elias_fano" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/succinct"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 perftest_elias_fano"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="perftest_elias_fano/fast">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/perftest_elias_fano" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/succinct"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 perftest_elias_fano/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="perftest_cartesian_tree">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/perftest_cartesian_tree" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/succinct"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 perftest_cartesian_tree"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="perftest_cartesian_tree/fast">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/perftest_cartesian_tree" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/succinct"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 perftest_cartesian_tree/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="perftest_bp_vector_rmq">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/perftest_bp_vector_rmq" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/succinct"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 perftest_bp_vector_rmq"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="perftest_bp_vector_rmq/fast">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/perftest_bp_vector_rmq" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/succinct"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 perftest_bp_vector_rmq/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="perftest_bp_vector">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/perftest_bp_vector" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/succinct"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 perftest_bp_vector"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="perftest_bp_vector/fast">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/perftest_bp_vector" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/succinct"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 perftest_bp_vector/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/succinct/perftest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/succinct/bp_vector.cpp">
+			<Option target="succinct"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/succinct/bp_vector.hpp">
+			<Option target="succinct"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/succinct/perftest/perftest_bp_vector.cpp">
+			<Option target="perftest_bp_vector"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/succinct/perftest/perftest_bp_vector_rmq.cpp">
+			<Option target="perftest_bp_vector_rmq"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/succinct/perftest/perftest_cartesian_tree.cpp">
+			<Option target="perftest_cartesian_tree"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/succinct/perftest/perftest_elias_fano.cpp">
+			<Option target="perftest_elias_fano"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/succinct/rs_bit_vector.cpp">
+			<Option target="succinct"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/succinct/rs_bit_vector.hpp">
+			<Option target="succinct"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/include/ds2i/ds2i_config.hpp.in">
+			<Option virtualFolder="CMake Files\include\ds2i\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/succinct/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\succinct\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/succinct/succinct_config.hpp.in">
+			<Option virtualFolder="CMake Files\external\succinct\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/succinct/perftest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\succinct\perftest\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\FastPFor\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/cmake_modules/Findsnappy.cmake">
+			<Option virtualFolder="CMake Files\external\FastPFor\cmake_modules\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/vroom_env/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vroom_env\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

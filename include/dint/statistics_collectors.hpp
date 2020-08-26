@@ -12,11 +12,11 @@ struct block_type {
         return hash_bytes64(data.data(), data.size());
     }
 
-    uint64_t freq;
-    std::vector<uint32_t> data;
+    uint64_t freq; // 频率
+    std::vector<uint32_t> data; // 数据
 };
 
-typedef std::unordered_map<uint64_t, block_type> map_type;
+typedef std::unordered_map<uint64_t, block_type> map_type; // key是哈希值，
 
 struct selector {
     uint32_t get(uint32_t const* entry, size_t n) {
@@ -54,7 +54,7 @@ struct length_freq_sorter {
     }
 };
 
-struct freq_length_sorter {
+struct freq_length_sorter {  // 排序是按照频率优先，然后是数据长度更长的优先
     bool operator()(block_type const& l, block_type const& r) {
         if (l.freq == r.freq) {
             return l.data.size() > r.data.size();
@@ -87,6 +87,7 @@ struct adjusted {
         return "adjusted";
     }
 
+    // 用在多字典上，按block进行划分，每个block根据最大值v划分到loglogv的字典中
     static void collect(std::vector<uint32_t>& buf,
                         std::vector<map_type>& block_maps) {
         auto b = buf.data();
@@ -106,10 +107,11 @@ struct adjusted {
         }
     }
 
+    // 用在单字典上
     static void collect(std::vector<uint32_t>& buf, map_type& block_map) {
         auto b = buf.data();
         for (uint32_t s = 0; s < constants::num_target_sizes; ++s) {
-            uint32_t block_size = constants::target_sizes[s];
+            uint32_t block_size = constants::target_sizes[s]; // 抽样的频率
             uint32_t blocks = buf.size() / block_size;
             for (uint32_t i = 0, pos = 0; i < blocks; ++i, pos += block_size) {
                 increase_frequency(b + pos, block_size, block_map);

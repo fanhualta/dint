@@ -13,7 +13,7 @@ struct dict_posting_list {
                       std::vector<uint8_t>& out, uint32_t n,
                       DocsIterator docs_begin, FreqsIterator freqs_begin) {
         TightVariableByte::encode_single(n, out);
-        uint64_t block_size = Coder::block_size;
+        uint64_t block_size = Coder::block_size; // 256
         uint64_t blocks = succinct::util::ceil_div(n, block_size);
         size_t begin_block_maxs = out.size();
         size_t begin_block_endpoints = begin_block_maxs + 4 * blocks;
@@ -32,6 +32,7 @@ struct dict_posting_list {
             uint32_t cur_block_size =
                 ((b + 1) * block_size <= n) ? block_size : (n % block_size);
 
+            // delta
             for (size_t i = 0; i < cur_block_size; ++i) {
                 uint32_t doc(*docs_it++);
                 docs_buf[i] = doc - last_doc - 1;
@@ -50,6 +51,50 @@ struct dict_posting_list {
             if (b != blocks - 1) {
                 *((uint32_t*)&out[begin_block_endpoints + 4 * b]) =
                     out.size() - begin_blocks;
+            }
+            block_base = last_doc + 1;
+        }
+    }
+
+    template <typename DocsIterator>
+    static void writeOmitFreq(typename Dictionary::builder& docs_dict_builder,
+                      std::vector<uint8_t>& out, uint32_t n,
+                      DocsIterator docs_begin) {
+        TightVariableByte::encode_single(n, out); // 使用VBC对长度进行编码
+        uint64_t block_size = Coder::block_size; // 默认值为128
+        uint64_t blocks = succinct::util::ceil_div(n, block_size); // block的个数
+        size_t begin_block_maxs = out.size();
+        // 记录每个block的最后一个元素
+        size_t begin_block_endpoints = begin_block_maxs + 4 * blocks;
+        // 记录每个block相较于begin_blocks的偏移
+        size_t begin_blocks = begin_block_endpoints + 4 * (blocks - 1);
+        out.resize(begin_blocks);
+
+        DocsIterator docs_it(docs_begin);
+        std::vector<uint32_t> docs_buf(block_size); // 记录一个block的数据，按照block分组进行压缩
+
+        uint32_t last_doc(-1);
+        uint32_t block_base = 0;
+
+        for (size_t b = 0; b < blocks; ++b) {
+            uint32_t cur_block_size =
+                ((b + 1) * block_size <= n) ? block_size : (n % block_size);
+
+            for (size_t i = 0; i < cur_block_size; ++i) {
+                uint32_t doc(*docs_it++);
+                docs_buf[i] = doc - last_doc - 1; // compute delta，计算差值
+                last_doc = doc;
+            }
+
+            *((uint32_t*)&out[begin_block_maxs + 4 * b]) = last_doc; // 更新每个block的最后一个元素
+
+            Coder::encode(docs_dict_builder, docs_buf.data(),
+                          last_doc - block_base - (cur_block_size - 1),
+                          cur_block_size, out);
+
+            if (b != blocks - 1) {
+                *((uint32_t*)&out[begin_block_endpoints + 4 * b]) =
+                    out.size() - begin_blocks; // 更新每个block的起始位置，第i个下标表示第i + 1个block的起始位置
             }
             block_base = last_doc + 1;
         }
@@ -100,6 +145,23 @@ struct dict_posting_list {
             , m_universe(universe)
             , m_docs_dict(docs_dict)
             , m_freqs_dict(freqs_dict) {
+            (void)term_id;
+            m_docs_buf.resize(Coder::block_size + Coder::overflow, 0);
+            m_freqs_buf.resize(Coder::block_size + Coder::overflow, 0);
+            reset();
+        }
+
+        document_enumerator(Dictionary const* docs_dict, uint8_t const* data,
+                            uint64_t universe,
+                            size_t term_id = 0)
+            : m_n(0)  // just to silence warnings
+            , m_base(TightVariableByte::decode(data, &m_n, 1))
+            , m_blocks(succinct::util::ceil_div(m_n, Coder::block_size)) // block的数量
+            , m_block_maxs(m_base) // 记录每个block的最大值
+            , m_block_endpoints(m_block_maxs + 4 * m_blocks)
+            , m_blocks_data(m_block_endpoints + 4 * (m_blocks - 1))
+            , m_universe(universe)
+            , m_docs_dict(docs_dict) {
             (void)term_id;
             m_docs_buf.resize(Coder::block_size + Coder::overflow, 0);
             m_freqs_buf.resize(Coder::block_size + Coder::overflow, 0);

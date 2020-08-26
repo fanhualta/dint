@@ -38,7 +38,7 @@ struct single_dictionary {
 
         void init() {
             m_size = reserved;
-            m_offsets.reserve(num_entries);
+            m_offsets.reserve(num_entries); // 默认为65536
 
             // NOTE: push [max_entry_size] 0s at the beginning of the table
             // to be copied in case of a run, thus the offset corresponding to
@@ -123,6 +123,7 @@ struct single_dictionary {
         }
 
         void build() {
+            // 进行去重以及前缀的重复性检查，返回可以表示目前数组的最小序列
             {
                 std::vector<std::vector<target_t>> targets;
                 targets.push_back(m_targets);
@@ -135,6 +136,7 @@ struct single_dictionary {
                 }
             }
 
+            // 在最小序列中寻找offset和size，并按位通过切分来进行划分
             {
                 logger() << "creating offsets..." << std::endl;
                 for (auto& cur : m_targets) {
@@ -145,7 +147,7 @@ struct single_dictionary {
                     uint32_t entry_size = entry.size();
                     uint32_t offset = std::distance(m_table.begin(), found_itr);
                     uint32_t size_and_offset =
-                        ((entry_size - 1) << 24) | offset;
+                        ((entry_size - 1) << 24) | offset;  // offset的高8位记录的是size， 低24位记录的是offset
                     m_offsets.push_back(size_and_offset);
                 }
             }

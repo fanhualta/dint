@@ -21,7 +21,7 @@ namespace ds2i {
                 throw std::runtime_error("Error opening file");
             }
             m_data = (posting_type const*)m_file.data();
-            m_data_size = m_file.size() / sizeof(m_data[0]);
+            m_data_size = m_file.size() / sizeof(m_data[0]); // 有多少个uint32_t
 
             auto ret = posix_madvise((void*)m_data, m_data_size, POSIX_MADV_SEQUENTIAL);
             if (ret) {

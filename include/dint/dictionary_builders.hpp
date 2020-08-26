@@ -12,8 +12,8 @@
 
 namespace ds2i {
 
-static const double codeword_bits = std::log2(constants::num_entries);
-static const double initial_bpi = 3 * codeword_bits;
+static const double codeword_bits = std::log2(constants::num_entries); // b值，默认为16
+static const double initial_bpi = 3 * codeword_bits;  // 为什么3倍，为什么cost那么计算？
 static const double eps = 0.0001;
 
 double cost(uint32_t block_size, uint32_t block_frequency) {
@@ -52,14 +52,15 @@ struct decreasing_static_frequencies {
         return filter;
     }
 
+    // 根据统计出的信息进行字典的创建
     static void build(typename dictionary_type::builder& dict_builder,
                       statistics_type& stats) {
         logger() << "building " << type() << " dictionary for "
-                 << stats.total_integers << " integers" << std::endl;
+                 << stats.total_integers << " integers" << std::endl; // 所有posting的doc num之和
 
         dict_builder.init();
         for (uint64_t s = 0; s != stats.blocks.size(); ++s) {
-            uint64_t n = dictionary_type::num_entries;
+            uint64_t n = dictionary_type::num_entries;  //字典中的条目，如果超过阈值就用阈值，否则就用实际大小
             if (stats.blocks[s].size() < n) {
                 n = stats.blocks[s].size();
             }

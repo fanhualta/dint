@@ -13,11 +13,12 @@
 const size_t runs = 10 + 1;
 
 template <typename QueryOperator, typename IndexType>
-void op_perftest(IndexType const& index,
-                 QueryOperator&& query_op,  // XXX!!!
-                 std::vector<ds2i::term_id_vec> const& queries,
-                 std::string const& index_type, std::string const& query_type,
-                 size_t runs) {
+void op_perftest(IndexType const& index, // 创建好的索引
+                 QueryOperator&& query_op,  // XXX!!!  query的类型 and/or之类的
+                 std::vector<ds2i::term_id_vec> const& queries, // 查询的列表
+                 std::string const& index_type,  // 创建的索引类型
+                 std::string const& query_type,  // 查询的类型
+                 size_t runs) { // 11
     using namespace ds2i;
 
     std::vector<double> query_times;
@@ -90,6 +91,8 @@ void perftest(const char* index_filename, const char* wand_data_filename,
     }
 
     std::vector<std::string> query_types;
+
+    // 将query类型用：分割开
     boost::algorithm::split(query_types, query_type, boost::is_any_of(":"));
 
     for (auto const& t : query_types) {

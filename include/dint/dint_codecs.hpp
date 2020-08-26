@@ -138,20 +138,21 @@ private:
     }
 };
 
+// 按照block为单位进行数据的压缩，默认block的大小为128
 struct opt_dint_single_dict_block {
     static const uint64_t block_size = constants::block_size;
     static const uint64_t overflow = dint_block::overflow;
 
     template <typename Builder>
     static void encode(Builder& builder, uint32_t const* begin, uint64_t n,
-                       std::vector<uint8_t>& out, uint32_t b) {
+                       std::vector<uint8_t>& out, uint32_t b) { // 参数分别为：字典、输入、长度、输出、b值(表示要用几位来表示项索引)
         std::vector<node> path(n + 2);
         path[0] = {0, 1, 0};  // dummy node
         for (uint32_t i = 1; i < n + 1; ++i) {
-            path[i] = {i - 1, 1, 3 * i};
+            path[i] = {i - 1, 1, 3 * i}; // 累积的cost耗时？
         }
 
-        for (uint32_t i = 0; i < n; ++i) {
+        for (uint32_t i = 0; i < n; ++i) { // 一共有多少doc
             uint32_t longest_run_size = 0;
             uint32_t run_size = std::min<uint64_t>(256, n - i);
             uint32_t index = EXCEPTIONS;
@@ -164,7 +165,7 @@ struct opt_dint_single_dict_block {
                 }
             }
 
-            if (longest_run_size >= 16) {
+            if (longest_run_size >= 16) { // 因为连续1的item项为{16, 32, 64, 128, 256}
                 uint32_t k = 256;
                 while (longest_run_size < k and k > 16) {
                     k /= 2;
@@ -173,7 +174,7 @@ struct opt_dint_single_dict_block {
                 while (k >= 16) {
                     uint32_t c = path[i].cost + 1;
                     if (path[i + k].cost > c) {
-                        path[i + k] = {i, index, c};
+                        path[i + k] = {i, index, c}; // k 指的是长度，index表示是entry下标，更新cost ？
                     }
 
                     k /= 2;
@@ -181,7 +182,7 @@ struct opt_dint_single_dict_block {
                 }
             }
 
-            for (uint32_t s = 0; s < constants::num_target_sizes; ++s) {
+            for (uint32_t s = 0; s < constants::num_target_sizes; ++s) { // 根据采样率进行字典查找
                 uint32_t sub_block_size = constants::target_sizes[s];
                 uint32_t len = std::min<uint32_t>(sub_block_size, n - i);
                 index = builder.lookup(begin + i, len);
@@ -258,7 +259,7 @@ struct opt_dint_single_dict_block {
     static void encode(Builder& builder, uint32_t const* in,
                        uint32_t sum_of_values, uint32_t n,
                        std::vector<uint8_t>& out) {
-        if (n < block_size) {
+        if (n < block_size) { // 如果不满一个block，就采用别的方式进行编码
             interpolative_block::encode(in, sum_of_values, n, out);
             return;
         }
@@ -409,6 +410,7 @@ struct opt_dint_multi_dict_block {
         }
 
         // Option (1): choose the best dictionary
+        // 一共是两倍的num_selectors，共12个。前半部分是l = 16, 后半部分是l = 8
         std::vector<std::vector<uint8_t>> encoded(2 * constants::num_selectors);
         size_t best_size = size_t(-1);
         uint32_t selector_code = 0;
@@ -427,7 +429,7 @@ struct opt_dint_multi_dict_block {
             }
         }
         // control byte
-        out.push_back(selector_code);
+        out.push_back(selector_code); // 先push back类型
         out.insert(out.end(), encoded[selector_code].begin(),
                    encoded[selector_code].end());
 

@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="FastPFor"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\include\;CMake Files\include\ds2i\;CMake Files\external\;CMake Files\external\succinct\;CMake Files\external\succinct\perftest\;CMake Files\external\FastPFor\;CMake Files\external\FastPFor\cmake_modules\;CMake Files\src\;CMake Files\vroom_env\;CMake Files\test\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="csv2maropu">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/csv2maropu" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 csv2maropu"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="csv2maropu/fast">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/csv2maropu" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 csv2maropu/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="partitionbylength">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/partitionbylength" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 partitionbylength"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="partitionbylength/fast">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/partitionbylength" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 partitionbylength/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="check">
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 check"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unit">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/unit" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 unit"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unit/fast">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/unit" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 unit/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="inmemorybenchmark">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/inmemorybenchmark" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 inmemorybenchmark"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="inmemorybenchmark/fast">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/inmemorybenchmark" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 inmemorybenchmark/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="benchbitpacking">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/benchbitpacking" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 benchbitpacking"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="benchbitpacking/fast">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/benchbitpacking" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 benchbitpacking/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="entropy">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/entropy" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 entropy"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="entropy/fast">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/entropy" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 entropy/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gapstats">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/gapstats" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 gapstats"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gapstats/fast">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/gapstats" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 gapstats/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="codecs">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/codecs" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 codecs"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="codecs/fast">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/codecs" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 codecs/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FastPFor_lib">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/libFastPFor_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 FastPFor_lib"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FastPFor_lib/fast">
+				<Option output="/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/libFastPFor_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/ds2i"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/dint"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/include/tgc"/>
+					<Add directory="/Users/litianan/workspace/C++/dint/external/FastPFor/headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 FastPFor_lib/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/litianan/workspace/C++/dint/cmake-build-debug/external/FastPFor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/src/benchbitpacking.cpp">
+			<Option target="benchbitpacking"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/src/bitpacking.cpp">
+			<Option target="FastPFor_lib"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/src/bitpackingaligned.cpp">
+			<Option target="FastPFor_lib"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/src/bitpackingunaligned.cpp">
+			<Option target="FastPFor_lib"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/src/codecs.cpp">
+			<Option target="codecs"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/src/csv2maropu.cpp">
+			<Option target="csv2maropu"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/src/entropy.cpp">
+			<Option target="entropy"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/src/gapstats.cpp">
+			<Option target="gapstats"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/src/horizontalbitpacking.cpp">
+			<Option target="benchbitpacking"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/src/inmemorybenchmark.cpp">
+			<Option target="inmemorybenchmark"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/src/partitionbylength.cpp">
+			<Option target="partitionbylength"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/src/simdbitpacking.cpp">
+			<Option target="FastPFor_lib"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/src/unit.cpp">
+			<Option target="unit"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/include/ds2i/ds2i_config.hpp.in">
+			<Option virtualFolder="CMake Files\include\ds2i\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/succinct/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\succinct\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/succinct/succinct_config.hpp.in">
+			<Option virtualFolder="CMake Files\external\succinct\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/succinct/perftest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\succinct\perftest\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\FastPFor\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/external/FastPFor/cmake_modules/Findsnappy.cmake">
+			<Option virtualFolder="CMake Files\external\FastPFor\cmake_modules\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/vroom_env/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vroom_env\"/>
+		</Unit>
+		<Unit filename="/Users/litianan/workspace/C++/dint/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

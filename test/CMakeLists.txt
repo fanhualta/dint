@@ -9,6 +9,20 @@ foreach(TEST_SRC ${TEST_SOURCES})
   add_test(${TEST_SRC_NAME} ${TEST_SRC_NAME})
 endforeach(TEST_SRC)
 
+add_executable(tgcencoding tgc_encoding.cpp ../include/tgc/tgccoding.cpp)
+target_link_libraries(tgcencoding
+        succinct
+        ${Boost_LIBRARIES}
+        )
+add_test(tgcencoding tgcencoding)
+
+add_executable(multi_tgc_coding multi_tgc_encoding.cpp ../include/tgc/tgccoding.cpp)
+target_link_libraries(multi_tgc_coding
+        succinct
+        ${Boost_LIBRARIES}
+        )
+add_test(multi_tgc_encoding multi_tgc_coding)
+
 target_link_libraries(test_block_codecs
     FastPFor_lib)
 

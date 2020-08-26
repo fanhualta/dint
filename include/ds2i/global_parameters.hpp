@@ -8,7 +8,7 @@ namespace ds2i {
             , ef_log_sampling1(8)
             , rb_log_rank1_sampling(9)
             , rb_log_sampling1(8)
-            , log_partition_size(7)
+            , log_partition_size(10) // 7
         {}
 
         template <typename Visitor>

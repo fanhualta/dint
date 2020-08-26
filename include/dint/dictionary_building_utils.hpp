@@ -91,11 +91,14 @@ std::priority_queue<overlap_t> compute_all_overlaps(
 
 void perform_greedy_prefix_suffix_overlap(std::vector<target_t>& entries) {
     std::cout << "compute_all_overlaps" << std::endl;
+
+    // handle overlap size大于2的情况
     auto overlaps = compute_all_overlaps(entries);
     std::cout << "overlaps = " << overlaps.size() << std::endl;
     std::cout << "merge overlapping entries" << std::endl;
-    size_t merges = 0;
-    size_t overlap_sum = 0;
+    size_t merges = 0; // 合并的次数
+    size_t overlap_sum = 0; // 合并的长度总和
+    // 合并overlap
     while (!overlaps.empty()) {
         auto cur = overlaps.top();
         overlaps.pop();
@@ -106,8 +109,8 @@ void perform_greedy_prefix_suffix_overlap(std::vector<target_t>& entries) {
         // std::cout << merges << " overlaps = " << overlaps.size() << " " <<
         // cur.overlap << std::endl;
 
-        // (a) merge the nodes
-        overlap_sum += cur.overlap;
+        // (a) merge the nodes， 将所有的有效的node进行合并，合并到左边的node，去掉右边的node
+        overlap_sum += cur.overlap; // 累积的overlap的长度
         auto& node_left = entries[cur.left];
         auto copy_itr = entries[cur.right].entry.begin() + cur.overlap;
         std::copy(copy_itr, entries[cur.right].entry.end(),
@@ -134,6 +137,7 @@ void perform_greedy_prefix_suffix_overlap(std::vector<target_t>& entries) {
         ++merges;
     }
 
+    // 去掉invalid
     auto itr = entries.begin();
     while (itr != entries.end()) {
         if (itr->valid == false) {
@@ -144,6 +148,7 @@ void perform_greedy_prefix_suffix_overlap(std::vector<target_t>& entries) {
     }
 
     // perform single overlap merging
+    // handle overlap size等于1的情况
     std::cout << "perform single overlap merging" << std::endl;
     size_t total_merges_performed = 0;
     for (size_t i = 0; i < entries.size(); i++) {
@@ -243,6 +248,7 @@ struct pack_policy {
         return "packed";
     }
 
+    //找到overlap再进行合并
     static std::vector<target_t> compact(
         std::vector<std::vector<target_t>> const& targets) {
         std::vector<target_t> all_targets;

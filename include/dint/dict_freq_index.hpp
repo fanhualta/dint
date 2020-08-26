@@ -67,6 +67,15 @@ struct dict_freq_index {
             m_freqs_dict_builder.prepare_for_encoding();
         }
 
+        void build_model(std::vector<uint64_t> const& list) {
+            logger() << "building or loading dictionary for docs..."
+                     << std::endl;
+            build_or_load_dict(m_docs_dict_builder, list);
+            logger() << "DONE" << std::endl;
+
+            m_docs_dict_builder.prepare_for_encoding();
+        }
+
         void build(dict_freq_index& dfi) {
             m_queue.complete();
 
@@ -131,7 +140,7 @@ struct dict_freq_index {
         uint64_t m_num_docs;
         global_parameters m_params;
         semiasync_queue m_queue;
-        std::vector<uint64_t> m_endpoints;
+        std::vector<uint64_t> m_endpoints;  // 记录每个posting list的结束位置
         std::vector<uint8_t> m_lists;
         typename dictionary_type::builder m_docs_dict_builder;
         typename dictionary_type::builder m_freqs_dict_builder;
@@ -150,7 +159,7 @@ struct dict_freq_index {
                 builder.load_from_file(dictionary_file);
             } else {
                 using statistics_type =
-                    typename dictionary_builder::statistics_type;
+                typename dictionary_builder::statistics_type;
                 auto statistics = statistics_type::create_or_load(
                     prefix_name, dt, dictionary_builder::filter());
                 dictionary_builder::build(builder, statistics);
@@ -158,6 +167,15 @@ struct dict_freq_index {
                     logger() << "cannot write dictionary to file";
                 }
             }
+        }
+
+        static void build_or_load_dict(typename dictionary_type::builder& builder,
+                                std::vector<uint64_t> const& list) {
+            using statistics_type =
+                typename dictionary_builder::statistics_type;
+            auto statistics = statistics_type::create_or_load(
+                    list, dictionary_builder::filter());
+            dictionary_builder::build(builder, statistics);
         }
     };
 
@@ -171,6 +189,7 @@ struct dict_freq_index {
         return m_num_docs;
     }
 
+    // 获取第i个term_id的posting_list
     document_enumerator operator[](size_t i) const {
         assert(i < size());
         compact_elias_fano::enumerator endpoints(m_endpoints, 0, m_lists.size(),
@@ -215,11 +234,11 @@ struct dict_freq_index {
 
 private:
     global_parameters m_params;
-    size_t m_size;
-    size_t m_num_docs;
-    succinct::bit_vector m_endpoints;
-    succinct::mapper::mappable_vector<uint8_t> m_lists;
-    dictionary_type m_docs_dict;
-    dictionary_type m_freqs_dict;
+    size_t m_size; // posting list个数
+    size_t m_num_docs; // docid个数
+    succinct::bit_vector m_endpoints; // 结束位置
+    succinct::mapper::mappable_vector<uint8_t> m_lists; // 编码结果
+    dictionary_type m_docs_dict; // doc的字典
+    dictionary_type m_freqs_dict; // freq的字典
 };
 }  // namespace ds2i

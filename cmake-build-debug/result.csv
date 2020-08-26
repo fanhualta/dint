@@ -1,0 +1,2 @@
+term num,size,tgc encode time,tgc encode size,tgc decode time,ef encode time,ef encode size,ef decode time,dint encode time,dint dictionary size,dint encode size,dint decode time
+1000	341,13080000,54,51	98,30460000,24,12	95,21858327,32,10	3023,4456452,3033475,47,50	20108,2351592,3033475,58,57	

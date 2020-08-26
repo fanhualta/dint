@@ -139,6 +139,7 @@ struct multi_dictionary {
         }
 
         void build() {
+            // 所有字典去重，而且返回所有字典数组形成的最小序列
             {
                 logger() << "compacting..." << std::endl;
                 auto compacted_targets = CompactingPolicy::compact(m_targets);

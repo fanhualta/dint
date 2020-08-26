@@ -37,6 +37,7 @@ link_directories(${Boost_LIBRARY_DIRS})
 
 include_directories(${DS2I_SOURCE_DIR}/include/ds2i)
 include_directories(${DS2I_SOURCE_DIR}/include/dint)
+include_directories(${DS2I_SOURCE_DIR}/include/tgc)
 
 add_subdirectory(external)
 

@@ -52,12 +52,19 @@ void build_model(std::string input_basename,
 }
 
 template <typename CollectionType>
+void build_model(std::vector<uint64_t> const& list,
+                 typename CollectionType::builder& builder) {
+    builder.build_model(list);
+}
+
+template <typename CollectionType>
 void create_collection(std::string input_basename,
                        global_parameters const& params,
                        const char* output_filename, bool check,
                        std::string const& seq_type) {
     binary_freq_collection input(input_basename.c_str());
     size_t num_docs = input.num_docs();
+    std::cout << "num_docs: " << num_docs << std::endl;
     double tick = get_time_usecs();
     double user_tick = get_user_time_usecs();
 

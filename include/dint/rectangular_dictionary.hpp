@@ -17,15 +17,15 @@ struct rectangular_dictionary {
     static const uint32_t num_entries = t_num_entries;
     static const uint32_t max_entry_size = t_max_entry_size;
     static const uint32_t invalid_index = uint32_t(-1);
-    static const uint32_t reserved = EXCEPTIONS + 5;
+    static const uint32_t reserved = EXCEPTIONS + 5; // EXCEPTION的两位是记录不存在的数，5记录的是连续1，从256开始往下降，即{256, 128, 64, 32, 16}
 
     struct builder {
-        static const uint32_t num_entries = rectangular_dictionary::num_entries;
-        static const uint32_t max_entry_size =
+        static const uint32_t num_entries = rectangular_dictionary::num_entries; // default 65536
+        static const uint32_t max_entry_size = // default 16
             rectangular_dictionary::max_entry_size;
         static const uint32_t invalid_index =
-            rectangular_dictionary::invalid_index;
-        static const uint32_t reserved = rectangular_dictionary::reserved;
+            rectangular_dictionary::invalid_index;  // 没在字典找到相应的项时返回invalid
+        static const uint32_t reserved = rectangular_dictionary::reserved;  // 保留的几位，分别给连续1以及没有覆盖到的doc id来使用
 
         uint64_t codewords = 0;
         uint64_t small_exceptions = 0;
@@ -41,14 +41,15 @@ struct rectangular_dictionary {
         }
 
         void init() {
-            m_pos = reserved * (max_entry_size + 1);
+            m_pos = reserved * (max_entry_size + 1); // 加的1指的是长度占的位置
             m_size = reserved;
             m_table.resize(num_entries * (max_entry_size + 1), 0);
 
             uint32_t pos = max_entry_size + 1;
             for (int i = 0; i < EXCEPTIONS; ++i, pos += max_entry_size + 1) {
-                m_table[pos - 1] = 1;
+                m_table[pos - 1] = 1;  // 设置长度位
             }
+            // 初始化 5 位连续 1 的内容
             for (int i = 0, size = 256; i < 5;
                  ++i, pos += max_entry_size + 1, size /= 2) {
                 m_table[pos - 1] = size;
@@ -109,7 +110,7 @@ struct rectangular_dictionary {
 
         void build() {}
 
-        void prepare_for_encoding() {
+        void prepare_for_encoding() { // 创建m_map的过程
             std::vector<uint32_t> run(256, 0);
             uint32_t i = EXCEPTIONS;
             for (uint32_t n = 256; n >= 16; n /= 2, ++i) {
@@ -117,8 +118,8 @@ struct rectangular_dictionary {
                 m_map[hash] = i;
             }
             for (; i < size(); ++i) {
-                uint64_t hash = hash_bytes64(get(i), size(i));
-                m_map[hash] = i;
+                uint64_t hash = hash_bytes64(get(i), size(i)); // 获取entry和实际size
+                m_map[hash] = i; //做映射
             }
         }
 
@@ -194,8 +195,8 @@ struct rectangular_dictionary {
 
     private:
         uint32_t m_pos;
-        uint32_t m_size;
-        std::vector<uint32_t> m_table;
+        uint32_t m_size; // 当前字典的大小
+        std::vector<uint32_t> m_table; // 字典的capacity
 
         // map from hash codes to table indexes, used during encoding
         std::unordered_map<uint64_t, uint32_t> m_map;
